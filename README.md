@@ -1,0 +1,1 @@
+Calculadora criada para uso no campeonato Scholars Leader Board da Pokerstars.com.
