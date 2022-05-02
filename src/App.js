@@ -14,9 +14,9 @@ export default function App(){
     const calc1 = (Math.sqrt(inscritos) * 10) / (Math.sqrt(posicao));
     const calc2 = (Math.sqrt(inscritos) * 5 ) / (Math.sqrt(posicao));
     if(posicao <= (inscritos / 4)){
-      setMensagem("O total de pontos obtidos é : " + calc1.toFixed(2) + " pontos.")
+      setMensagem("O total de pontos obtidos é: " + calc1.toFixed(2) + " pontos.")
     }else {
-      setMensagem("O total de pontos obtidos é : " + calc2.toFixed(2) + " pontos.")
+      setMensagem("O total de pontos obtidos é: " + calc2.toFixed(2) + " pontos.")
     }
   }
   return(
@@ -26,12 +26,14 @@ export default function App(){
       <div className="area-input">
     <input 
       type="text"
+      inputMode='numeric'
       placeholder="Digite a posição atual ou final."
       value={posicao}
       onChange={(e) => setPosicao(e.target.value)}
     />
     <input 
       type="text"
+      inputMode='numeric'
       placeholder="Digite o total de inscritos."
       value={inscritos}
       onChange={(e) => setInscritos(e.target.value)}
