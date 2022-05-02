@@ -14,15 +14,15 @@ export default function App(){
     const calc1 = (Math.sqrt(inscritos) * 10) / (Math.sqrt(posicao));
     const calc2 = (Math.sqrt(inscritos) * 5 ) / (Math.sqrt(posicao));
     if(posicao <= (inscritos / 4)){
-      setMensagem("O total de pontos obtidos é de: " + calc1.toFixed(2) + " pontos.")
+      setMensagem("O total de pontos obtidos é : " + calc1.toFixed(2) + " pontos.")
     }else {
-      setMensagem("O total de pontos obtidos é de: " + calc2.toFixed(2) + " pontos.")
+      setMensagem("O total de pontos obtidos é : " + calc2.toFixed(2) + " pontos.")
     }
   }
   return(
     <div className="app">
       <h1>Calculadora Scholars Leaderboard</h1>
-      <span>Calcule os pontos obtidos no dia.</span>
+      <span>Calcule os pontos obtidos.</span>
       <div className="area-input">
     <input 
       type="text"
@@ -32,7 +32,7 @@ export default function App(){
     />
     <input 
       type="text"
-      placeholder="Digite o total de inscritos após o registro tardio."
+      placeholder="Digite o total de inscritos."
       value={inscritos}
       onChange={(e) => setInscritos(e.target.value)}
     />
